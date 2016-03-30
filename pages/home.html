@@ -1,0 +1,186 @@
+<div class="homepage" ng-class="blog">
+    <div ng-hide="blogLoad" class="blogPage">
+        <div ng-include="'pages/blog.html'"></div>
+    </div>
+    <div ng-show="blogLoad">
+    	<header class="header">
+    		<div class="header-container">
+    			<h1 class="logo">DT</h1>
+
+    			<nav class="main-nav">
+    				<ul>
+    					<li><a href="#intro">About</a></li>
+    					<li><a href="#works">Works</a></li>
+    					<li><a href="#blog">Article</a></li>
+    					<li><a href="#contact">Contact</a></li>
+    				</ul>
+    			</nav>
+
+    			<a href="mailto:daoduytan2212@gmail.com" class="mail-to">+ email </a>
+
+    			<button class="btn-nav"> <span></span></button>
+    		</div>
+    	</header>
+	<main role="main" class="main-home">
+        <!-- section intro -->
+        <section id="intro" class="section intro">
+            <img class="img img_coffee" src="images/lp-coffee.png" alt="" />
+            <canvas id="canvas"></canvas>
+            <div class="container">
+                <div class="col-1 pull-right">
+                    <div class="intro_text ">
+                        <h2>hi. I am TAN</h2>
+                        <p>a Frontend developer...</p>
+                        <a href="#works" class="btn"><span>Recent works</span></a>
+                    </div>
+                </div>
+                <div class="col-1 pull-left">
+                    <div class="phone">
+                        <img class="intro_phone" src="images/phone.png" alt="" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section intro -->
+        <!-- section about-->
+        <section id="about" class="section about">
+            <div class="container">
+                <div class="col-1">
+                    <div class="section-intro inner">
+                        <h3> My autobiography for you...</h3>
+                        <p>Hi. I'm Tan, is a front-end developer.</p>
+                        <p>I'm living in Ho Chi Minh City. I am very interested in the program and the nice website so I chose the Front-end. With Front-end, you will be a "painter" really, you creative freedom to create the "painting" with html, css, javascript.</p>
+                        <p>It is interesting. </p>
+                        <a href="#contact" class="btn"> <span>Download my CV</span></a>
+                    </div>
+                </div>
+                <div class="col-1">
+                    <div class="skills inner">
+                        <div class="skill">
+                            <p>Photoshop</p>
+                            <div data-skill="85%" class="skill-bar"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Html/Css</p>
+                            <div data-skill="90%" class="skill-bar"></div>
+                        </div>
+                        <div class="skill">
+                            <p>Javascript</p>
+                            <div data-skill="80%" class="skill-bar"></div>
+                        </div>
+                        <div class="skill">
+                            <p>UX/UI</p>
+                            <div data-skill="65%" class="skill-bar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /section about -->
+        <section class="top-works section" id="works">
+            <div class="container">
+                <div class="text-center">
+                    <div class="section-intro">
+                        <div class="section-intro inner">
+                            <h3>My Works</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section works-->
+        <section class="section works">
+            <div class="detail-work">
+                <div class="close-work"></div>
+                <div class="inner-detail-work">
+                </div>
+            </div>
+            <div class="group-works grid">
+
+               
+               <a ng-repeat="work in works" class="work" rel="{{work.id}}" ng-click="showW()" style="background-image: url(images/works/{{work.img}})" class="article-thumb">
+                    <div class="inner-work">
+                        <h3 class="name">{{work.name}}</h3>
+                    </div>
+                </a>
+                
+            </div>
+        </section>
+        <!-- /section works-->
+        <!-- section space-->
+        <section class="space">
+            <a href="" class="btn"> <span>View all Works...</span></a>
+        </section>
+        <!-- /section space-->
+        <!-- section blog-->
+        <section id="blog" class="section articles" ng-controller="postCtrl">
+            <div class="container">
+                <div class="col-1 pull-right">
+                    <div class="section-intro inner">
+                        <h3> ...Writing and coding artices...</h3>
+                        <p>I often write and code things fun in free time.</p>
+                        <a class="btn" ng-click="loadBlog()"> <span>View all Article...</span></a>
+                    </div>
+                </div>
+                <div class="col-1 no-padding pull-left">
+                    <div class="list-post-thum">
+
+                        <a href="" ng-repeat="artice in artices"style="background-image: url(images/post/{{artice.background}})" class="article-thumb">
+                            <div class="article-meta">
+                            <h3 class="name">{{artice.name}}</h3>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+                        
+        </section>
+        <!-- /section blog -->
+        <!-- section contact -->
+        <section id="contact" class="section contact">
+            <div class="container">
+                <div class="text-center section-intro">
+                    <h3>...Contact me... </h3>
+                    <p>
+                        Tell me about your project, I will contribute with you to complete it.
+                    </p>
+                </div>
+                
+                <myform></myform>
+
+                <ul class="socials">
+                    <li>Phone: 0969 811 549</li>
+                    <li>Email: daoduytan@gmail.com</li>
+                    <li>Skype: daoduytan2212</li>
+                </ul>
+            </div>
+        </section>
+        <!-- /section contact -->
+        <!-- section socials -->
+        <section class="section socials">
+            <div class="container">
+                <div class="facebook">
+                    <p>..on Facebook</p>
+                    <a href="#" class="btn"> <span>Go to Facebook</span></a>
+                </div>
+                <div class="google-plus">
+                    <p>..on Google+</p>
+                    <a href="#" class="btn"> <span>Go to Google+</span></a>
+                </div>
+                <div class="twiter">
+                    <p>..on Twitter</p>
+                    <a href="#" class="btn"> <span>Go to Twitter</span></a>
+                </div>
+            </div>
+        </section>
+        <!-- /section socials -->
+    </main>
+    <!-- end main -->
+    </div>
+</div>
+
+
+
+<!-- end homepage -->

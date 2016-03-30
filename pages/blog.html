@@ -1,0 +1,23 @@
+
+<div  ng-controller="blogCtrl">
+	
+	<div class="w-blog">
+		<div class="top">
+			<h2>BLog</h2>
+			<a ng-click="hideBlog()" class="back_home">
+			<svg>
+				<path class="path1" d="M15.422 7.406l-4.594 4.594 4.594 4.594-1.406 1.406-6-6 6-6z"></path>
+			</svg>
+			Home</a>
+		</div>
+		<div class="container">
+
+			<ul class="listPost">
+				<li ng-repeat="artice in artices">
+					<h3><a href="{{artice.link}}">{{artice.name}}</a></h3>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</div>

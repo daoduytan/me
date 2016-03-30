@@ -1,0 +1,98 @@
+* 
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+body 
+	font: 300 16px/1.4 'Fira Sans', sans-serif
+	color: #444
+	background: #F9F9F9
+
+a 
+	text-decoration: none
+	color: #212121
+
+button, a, input
+	&:focus 
+		outline: none
+
+.container 
+	height: 100%
+	width: 100%
+	margin-left: auto
+	margin-right: auto
+
+	&::before, &::after 
+		content: ""
+		display: table 
+		clear: both
+
+	.col-1 
+		float: left
+		padding: 2%
+		height: 100%
+		position: relative
+		z-index: 2
+		
+		&.no-padding
+			padding: 0 
+
+		.inner 
+			max-width: 450px
+			margin: auto
+
+.btn 
+	display: inline-block
+	background: #fff
+	overflow: hidden
+	position: relative
+	font-size: 20px
+	font-weight: 500
+	min-width: 250px
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2)
+	padding: .2em 0
+	text-align: center 
+	cursor: pointer
+
+	span 
+		display: block
+		padding: 0.4em 1em
+
+	.circle 
+		display: block
+		position: absolute
+		background: rgba(0, 0, 0, 0.075)
+		border-radius: 50%
+		transform: scale(0)
+
+		&.animate 
+			animation: effect 0.65s linear
+
+	
+
+	&:hover 
+		box-shadow: 0px 5px 14px rgba(0, 0, 0, 0.4)
+
+.text 
+	&-center 
+		text-align: center
+	&-right 
+		text-align: right
+	&-left 
+		text-align: left
+.pull
+	&-left 
+		float: left !important
+	&-right 
+		float: right !important
+
+.section-intro h3 
+	font-size: 30px
+	font-weight: 500
+	margin: 0 
+
+
+
+
+	
+	
