@@ -9,7 +9,9 @@
 
     			<nav class="main-nav">
     				<ul>
-    					<li><a href="#intro">About</a></li>
+    					<li>
+                            <a href="#intro">About</a>
+                        </li>
     					<li><a href="#works">Works</a></li>
     					<li><a href="#blog">Article</a></li>
     					<li><a href="#contact">Contact</a></li>
@@ -31,7 +33,7 @@
                     <div class="intro_text ">
                         <h2>hi. I am TAN</h2>
                         <p>a Frontend developer...</p>
-                        <a href="#works" class="btn"><span>Recent works</span></a>
+                        <a href="#works" class="btn" ng-click="scroll()"><span>Recent works</span></a>
                     </div>
                 </div>
                 <div class="col-1 pull-left">
@@ -51,26 +53,17 @@
                         <p>Hi. I'm Tan, is a front-end developer.</p>
                         <p>I'm living in Ho Chi Minh City. I am very interested in the program and the nice website so I chose the Front-end. With Front-end, you will be a "painter" really, you creative freedom to create the "painting" with html, css, javascript.</p>
                         <p>It is interesting. </p>
-                        <a href="#contact" class="btn"> <span>Download my CV</span></a>
+                        <a href="https://www.dropbox.com/s/szvx4zqthfvlnzg/cv.pdf?dl=0" class="btn" target="_blank"> <span>Download my CV</span></a>
                     </div>
                 </div>
                 <div class="col-1">
-                    <div class="skills inner">
-                        <div class="skill">
-                            <p>Photoshop</p>
-                            <div data-skill="85%" class="skill-bar"></div>
-                        </div>
-                        <div class="skill">
-                            <p>Html/Css</p>
-                            <div data-skill="90%" class="skill-bar"></div>
-                        </div>
-                        <div class="skill">
-                            <p>Javascript</p>
-                            <div data-skill="80%" class="skill-bar"></div>
-                        </div>
-                        <div class="skill">
-                            <p>UX/UI</p>
-                            <div data-skill="65%" class="skill-bar"></div>
+                    <div class="skills inner" ng-controller="skillCtrl">
+                        <div class="skill" ng-repeat="skill in skills">
+                            <p>{{skill.name}}</p>
+                            <div class="skill-bar">
+                                <span class="number" style="left: {{skill.number}}">{{skill.number}}</span>
+                                <div class="bar" style="width: {{skill.number}}"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -180,7 +173,4 @@
     <!-- end main -->
     </div>
 </div>
-
-
-
 <!-- end homepage -->

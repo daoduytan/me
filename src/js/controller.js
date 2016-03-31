@@ -115,10 +115,9 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
             id: 'guitar',
             img: 'guitar-thum.jpg'
         }
-
-
     ]
 
+   
 	$scope.blogLoad =  true;
 
     $scope.loadBlog =  function() {
@@ -130,7 +129,7 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
     }	
 
     $scope.hideBlog =  function() {
-    	$scope.blogLoad =  true;
+         $scope.blogLoad =  true;
     }
 
      $scope.showW = function() {
@@ -314,21 +313,21 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
         });
     }
 
-    function skill() {
-        var $skill = $('.skill-bar');
-        $skill.each(function() {
-            var $number = $(this).data('skill');
-            $(this).append("<span class='number'/>");
-            $(this).append('<div class="bar"/>');
-            $(this).find('.number').text($number).css('left', $number);
-            $(this).children('.bar').css('width', $number);
-        });
-    }
+    // function skill() {
+    //     var $skill = $('.skill-bar');
+    //     $skill.each(function() {
+    //         var $number = $(this).data('skill');
+    //         $(this).append("<span class='number'/>");
+    //         $(this).append('<div class="bar"/>');
+    //         $(this).find('.number').text($number).css('left', $number);
+    //         $(this).children('.bar').css('width', $number);
+    //     });
+    // }
 
     
 
     close_work();
-    skill();
+    // skill();
     clickBtn();
     smoothScroll(500, 'easeOutCirc');
    
@@ -370,13 +369,52 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
 
 }]);
 
+app.controller('skillCtrl', ['$scope', function($scope){
+    $scope.skills = [
+        {
+            name: 'Photoshop',
+            number: '85%'
+        },
+        {
+            name: 'Html/Css',
+            number: '90%'
+        },
+        {
+            name: 'Javascript',
+            number: '80%'
+        },
+        {
+            name: 'UX/UI',
+            number: '65%'
+        }
+    ]
+
+
+    // function skill() {
+    //     var $skill = $('.skill-bar');
+    //     console.log($skill);
+    //     $skill.each(function() {
+
+    //         var $number = $(this).data('skill');
+
+    //         $(this).append("<span class='number'/>");
+    //         $(this).append('<div class="bar"/>');
+    //         $(this).find('.number').text($number).css('left', $number);
+    //         $(this).children('.bar').css('width', $number);
+    //         console.log('hi');
+    //     });
+    // }
+
+    // skill();
+}]);
+
 
 app.controller('blogCtrl', ['$scope', function($scope){
-    $('body').bind(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 1000);
-    })
+    // $('body').bind(function() {
+    //     $('html, body').animate({
+    //         scrollTop: 0
+    //     }, 1000);
+    // })
 }]);
 
 app.controller('postCtrl', ['$scope', function($scope){
