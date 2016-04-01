@@ -167,7 +167,7 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
                 .children('.inner-detail-work')
                 .addClass('visible')
                 .html(spinner)
-                .load('works/' + nameWork + '.html');
+                .load('projects/' + nameWork + '.html');
             // $(this).parents('.works').prepend('<div class="detail-work"/>');
 
             $('html, body').animate({
