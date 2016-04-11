@@ -117,7 +117,7 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
         }
     ]
 
-   
+
 	$scope.blogLoad =  true;
 
     $scope.loadBlog =  function() {
@@ -126,7 +126,7 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
          $('html, body').animate({
             scrollTop: 0
         }, 500, 'easeOutCirc')
-    }	
+    }
 
     $scope.hideBlog =  function() {
          $scope.blogLoad =  true;
@@ -324,13 +324,13 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
     //     });
     // }
 
-    
+
 
     close_work();
     // skill();
     clickBtn();
     smoothScroll(500, 'easeOutCirc');
-   
+
 
     $('.btn-nav').click(function() {
 
@@ -365,8 +365,6 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
         $('body').removeClass('active');
     }
 
-
-
 }]);
 
 app.controller('skillCtrl', ['$scope', function($scope){
@@ -388,24 +386,6 @@ app.controller('skillCtrl', ['$scope', function($scope){
             number: '65%'
         }
     ]
-
-
-    // function skill() {
-    //     var $skill = $('.skill-bar');
-    //     console.log($skill);
-    //     $skill.each(function() {
-
-    //         var $number = $(this).data('skill');
-
-    //         $(this).append("<span class='number'/>");
-    //         $(this).append('<div class="bar"/>');
-    //         $(this).find('.number').text($number).css('left', $number);
-    //         $(this).children('.bar').css('width', $number);
-    //         console.log('hi');
-    //     });
-    // }
-
-    // skill();
 }]);
 
 
@@ -418,7 +398,7 @@ app.controller('blogCtrl', ['$scope', function($scope){
 }]);
 
 app.controller('postCtrl', ['$scope', function($scope){
-    
+
     function startArticles() {
         var wScroll = $(window).scrollTop();
 
@@ -445,4 +425,10 @@ app.controller('postCtrl', ['$scope', function($scope){
         startArticles();
 
     });
+}])
+
+
+app.controller('adminCtrl', ['$scope' , function($scope){
+
+
 }])
