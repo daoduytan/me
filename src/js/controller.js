@@ -1,122 +1,11 @@
-app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope){
-	$rootScope.artices = [
-        {
-            name: 'Coding landing page music',
-            link: '',
-            background: 'boardgame.jpg'
-        },
+app.controller('homeCtrl', ['$scope', '$http', function($scope, $http){
 
-        {
-            name: 'Loading icon wifth SVG',
-            link: '',
-            background: 'contact-form.png'
-        },
-
-        {
-            name: 'Creat form validate',
-            link: '',
-            background: 'open.png'
-        },
-
-        {
-            name: 'Music player',
-            link: 'a',
-            background: 'oplus.jpg'
-        },
-
-        {
-            name: 'Animation css',
-            link: '',
-            background: 'perfecto.jpg'
-        },
-
-        {
-            name: 'Loading icon wifth SVG',
-            link: '',
-            background: 'small_1x.png'
-        },
-
-        {
-            name: 'Creat form validate',
-            link: '',
-            background: 'steak_exploration.jpg'
-        },
-
-        {
-            name: 'Music player',
-            link: 'a',
-            background: 'taglor_landing.png'
-        },
-        {
-            name: 'Coding landing page music',
-            link: '',
-            background: 'tasky02.png'
-        },
-
-        {
-            name: 'Loading icon wifth SVG',
-            link: '',
-            background: 'untitled.png'
-        },
-
-        {
-            name: 'Creat form validate',
-            link: '',
-            background: '347b758bc1203b916f04e40d83963e72.jpg'
-        },
-
-        {
-            name: 'Music player',
-            link: 'a',
-            background: '2b5d28e2b10d8f5b9e1be5d08df495ee.jpg'
-        }
-    ]
-
-    $rootScope.works =  [
-
-        {
-            name: 'The life pill',
-            id: 'life-for-life',
-            img: 'life-for-life-thum.jpg'
-        },
-
-        {
-            name: 'Pay-it-forward Global',
-            id: 'payitforward',
-            img: 'payitforward-thum.jpg'
-        },
-        {
-            name: 'ALN',
-            id: 'aln',
-            img: 'aln-thum.jpg'
-        },
-        {
-            name: 'Care Ultima',
-            id: 'careultima',
-            img: 'careultima-thum.jpg'
-        },
-        {
-            name: 'Website consulting',
-            id: 'website-consulting',
-            img: '21-thum.jpg'
-        },
-        {
-            name: 'Steele &#038; Ungar',
-            id: 'steelesungar',
-            img: 'steelesungar-thum.jpg'
-        },
-        {
-            name: 'Krcmic',
-            id: 'krcmic',
-            img: 'krcmic-thum.jpg'
-        },
-        {
-            name: 'TotallyGuitars E-gift Card',
-            id: 'guitar',
-            img: 'guitar-thum.jpg'
-        }
-    ]
-
+	$http.get('json/work.json')
+				.success(function(response) {
+					$scope.works = response.works;
+					$scope.artices = response.artices;
+						$scope.skills = response.skills;
+				});
 
 	$scope.blogLoad =  true;
 
@@ -368,24 +257,6 @@ app.controller('homeCtrl', ['$scope', '$rootScope', function($scope, $rootScope)
 }]);
 
 app.controller('skillCtrl', ['$scope', function($scope){
-    $scope.skills = [
-        {
-            name: 'Photoshop',
-            number: '85%'
-        },
-        {
-            name: 'Html/Css',
-            number: '90%'
-        },
-        {
-            name: 'Javascript',
-            number: '80%'
-        },
-        {
-            name: 'UX/UI',
-            number: '65%'
-        }
-    ]
 }]);
 
 
@@ -429,6 +300,4 @@ app.controller('postCtrl', ['$scope', function($scope){
 
 
 app.controller('adminCtrl', ['$scope' , function($scope){
-
-
 }])
