@@ -1,11 +1,11 @@
 app.controller('homeCtrl', ['$scope', '$http', function($scope, $http){
 
-	$http.get('json/work.json')
-				.success(function(response) {
-					$scope.works = response.works;
-					$scope.artices = response.artices;
-						$scope.skills = response.skills;
-				});
+	$http.get('json/data.json')
+    	.success(function(response) {
+    		$scope.works = response.works;
+    		$scope.artices = response.artices;
+    			$scope.skills = response.skills;
+    	});
 
 	$scope.blogLoad =  true;
 
