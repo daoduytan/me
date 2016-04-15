@@ -1,3 +1,9 @@
+app.controller('loadCtrl', ['$scope', function($scope) {
+	setTimeout(function(){
+      $('body').addClass('loaded');
+  }, 3000);
+}]);
+
 app.controller('homeCtrl', ['$scope', '$http', function($scope, $http){
 
 	$http.get('json/data.json')
