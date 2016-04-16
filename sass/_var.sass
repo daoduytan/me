@@ -92,8 +92,44 @@ button, a, input, textarea
 	font-weight: 500
 	margin: 0 
 
+ 
+.loaded
+  .mainPage 
+    visibility: visible
+
+  .loadPage
+    display: none
+
+.mainPage 
+  visibility: hidden
+  transition: all .3s ease-in-out
+
+.loadPage 
+  +position(fixed, 0 0 0 0)
+  background: #f9f9f9
+  z-index: 10000
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+  .spinner
+    +size(40px 40px)
+    position: relative
+    margin: 100px auto
+   
+  .double-bounce1, .double-bounce2
+    +size(100% 100%)
+    border-radius: 50%
+    background: #6ce6c1
+    opacity: .6
+    +position(absolute, 0 null null 0)
+    -webkit-animation: sk-bounce 2s infinite ease-in-out
+    -moz-animation: sk-bounce 2s infinite ease-in-out
+    animation: sk-bounce 2s infinite ease-in-out
+
+  .double-bounce2
+    animation-delay: 1s
+    -webkit-animation-delay: 1s
+    
 
 
-
-	
-	

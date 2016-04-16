@@ -1,7 +1,7 @@
 app.controller('loadCtrl', ['$scope', function($scope) {
 	setTimeout(function(){
       $('body').addClass('loaded');
-  }, 3000);
+  }, 5000);
 }]);
 
 app.controller('homeCtrl', ['$scope', '$http', function($scope, $http){

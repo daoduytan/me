@@ -6,3 +6,12 @@ app.directive('myform', function(){
 		templateUrl: 'include/form.html'
 	};
 });
+
+app.directive('loadpage', function() {
+  return {
+    name: 'loadPage',
+    restrict: 'E',
+    templateUrl: 'include/load.html'
+  }
+
+});

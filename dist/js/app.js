@@ -21,10 +21,20 @@ app.directive('myform', function(){
 		templateUrl: 'include/form.html'
 	};
 });
+
+app.directive('loadpage', function() {
+  return {
+    name: 'loadPage',
+    restrict: 'E',
+    templateUrl: 'include/load.html'
+  }
+
+});
+
 app.controller('loadCtrl', ['$scope', function($scope) {
 	setTimeout(function(){
       $('body').addClass('loaded');
-  }, 3000);
+  }, 5000);
 }]);
 
 app.controller('homeCtrl', ['$scope', '$http', function($scope, $http){
