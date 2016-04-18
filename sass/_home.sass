@@ -1,93 +1,92 @@
 /* intro */
-.intro 
+.intro
 	background: #3F5765 url(../../images/cir.png) no-repeat center
 	background-size: cover
 	min-height: 650px
 	position: relative
 	overflow: hidden
 
-	canvas 
+	canvas
 		+position(absolute, 0 null null 0)
 		z-index: 1
 		+size(100% 100%)
-		opacity: .3 
+		opacity: .3
 
-	.img 
+	.img
 		position: absolute
 		z-index: 2
 
-	.img_coffee 
+	.img_coffee
 		top: -50px
 		right: 150px
 
 
-	.phone 
+	.phone
 		position: relative
 		width: 300px
 
-		&:before 
+		&:before
 			display: block
 			+size(222px 387px)
 			content: ""
 			+position(absolute, 35px null null 20px)
 			background: url(../../images/web-s.jpg) no-repeat top center
 			transition: all 10s ease-in-out
-			-webkit-animation: phoneBg 40s infinite ease-in-out 2s
-			animation: phoneBg 40s infinite ease-in-out 2s 
-
+			-webkit-animation: phoneBg 50s infinite ease-in-out 2s
+			animation: phoneBg 50s infinite ease-in-out 2s
 
 	&_text
 		color: #fff
 		font-size: 30px
 
-		h2 
+		h2
 			margin: 0
 			padding: 0
 			font-weight: 700
-			text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5) 
+			text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5)
 
-		p 
-			margin: 10px 0 30px	
+		p
+			margin: 10px 0 30px
 			text-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5)
 
 
 /* about */
-.about 
+.about
 	color: white
 	padding: 30px 0
 	position: relative
 	background: url(../../images/cv.jpg) no-repeat
-	background-size: cover 
+	background-size: cover
 
-	&:before 
+	&:before
 		display: block
 		content: ""
 		+size(100% 100%)
 		+position(absolute, 0 null null 0)
-		background: rgba(197, 69, 69, 0.93) 
+		background: rgba(197, 69, 69, 0.93)
 
-	.btn 
+	.btn
 		color: #C54545
 
-	.skills 
+	.skills
 		font-size: 15px
 
-		.skill 
+		.skill
 			margin-bottom: 40px
 
-			&:last-child 
+			&:last-child
 				margin-bottom: 0
 
-			p 
+			p
 				margin-bottom: 15px
 				font-weight: 500
 
-			.skill-bar 
+			.skill-bar
 				+size(100% 10px)
 				background: rgba(255, 255, 255, 0.5)
 				position: relative
 
-				span 
+				span
 					+position(absolute, -40px null null null)
 					background: #fff
 					display: inline-block
@@ -100,7 +99,7 @@
 						size: 14px
 						weight: 500
 
-					&:after 
+					&:after
 						+position(absolute, null 50% -10px null)
 						margin-right: -5px
 						content: ""
@@ -109,35 +108,35 @@
 							style: solid
 							color: #fff transparent transparent
 
-				.bar 
+				.bar
 					+position(absolute, 0 null null 0)
 					position: absolute
 					display: inline-block
 					+size(50px 100%)
-					background: #fff 
+					background: #fff
 
 
 /* works */
-.top-works 
+.top-works
 	background: url(../../images/geometry.png)
 	padding: 50px 0
 
-	* 
+	*
 		position: relative
 		z-index: 2
 
-	h3 
-		
-		color: #6CE6C1
-		text-transform: uppercase 
+	h3
 
-	p 
+		color: #6CE6C1
+		text-transform: uppercase
+
+	p
 		margin: 20px 15%
 
-.group-works 
+.group-works
 	overflow: hidden
 
-	.work 
+	.work
 		display: block
 		background:
 			repeat: no-repeat
@@ -148,12 +147,12 @@
 		float: left
 		cursor: pointer
 
-		&:after 
+		&:after
 			content: ""
 			display: block
 			padding-bottom: 70%
 
-		.inner-work 
+		.inner-work
 			position: absolute
 			+size(100% 100%)
 			padding: 30px 15px
@@ -166,31 +165,31 @@
 			justify-content: center
 			text-align: center
 
-			h3 
+			h3
 				margin: 0
 				font:
 					size: 14px
 					weight: 700
 				text-transform: uppercase
-				color: yellow 
+				color: yellow
 
 
-		&:hover 
-			.inner-work 
+		&:hover
+			.inner-work
 				-webkit-animation: animation 1000ms linear both
 				-moz-animation: animation 1000ms linear both
-				animation: animation 1000ms linear both 
+				animation: animation 1000ms linear both
 
 
-.works 
-	.detail-work 
+.works
+	.detail-work
 		position: relative
 		z-index: 1000
 		background: #F9F9F9
 		height: 0
-		overflow: hidden 
+		overflow: hidden
 
-	.close-work 
+	.close-work
 		+position(absolute, 20px 20px null null)
 		z-index: 999
 		+size(40px 40px)
@@ -202,93 +201,93 @@
 		line-height: 40px
 		font-size: 20px
 		cursor: pointer
-		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2) 
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
 
-		&::before, &::after 
+		&::before, &::after
 			content: ""
 			display: block
 			+size(20px 2px)
 			+position(absolute, 20px null null 10px)
 			background: #212121
 
-		&::before 
+		&::before
 			-webkit-transform: rotate(45deg)
 			-moz-transform: rotate(45deg)
 			transform: rotate(45deg)
 
-		&::after 
+		&::after
 			-webkit-transform: rotate(-45deg)
 			-moz-transform: rotate(-45deg)
 			transform: rotate(-45deg)
 
-.inner-detail-work 
+.inner-detail-work
 	overflow: hidden
 	-webkit-transform: translateY(150%)
 	-moz-transform: translateY(150%)
 	transform: translateY(150%)
 	-webkit-transition: all .6s ease-in-out
 	-moz-transition: all .6s ease-in-out
-	transition: all .6s ease-in-out 
+	transition: all .6s ease-in-out
 
-	&.visible 
+	&.visible
 		-webkit-transform: translateY(0%)
 		-moz-transform: translateY(0%)
 		transform: translateY(0%)
 		min-height: 320px
-		background: #6CE6C1 
+		background: #6CE6C1
 
-	.top 
+	.top
 		background: #FFE75E
 		padding: 100px 15px
 		overflow: hidden
-		text-align: center 
+		text-align: center
 
-		h2 
+		h2
 			padding: 50px 0 20px
 			margin: 0
 			font-size: 80px
 			text-align: center
-			text-transform: uppercase 
+			text-transform: uppercase
 
-		p 
+		p
 			display: block
-			margin: 15px 0 60px 
+			margin: 15px 0 60px
 
-	.bottom 
+	.bottom
 		padding: 100px 0
 		overflow: hidden
-		background: #DFDFDF 
+		background: #DFDFDF
 
-		.img 
+		.img
 			width: 100%
 			max-width: 960px
 			margin: auto
-			text-align: center 
+			text-align: center
 
-			img 
+			img
 				display: block
 				max-width: 100%
-				margin: auto 
+				margin: auto
 
-.all-work .group-works a 
+.all-work .group-works a
 	width: 50%
 
-	&:after 
-		padding-top: 55% 
+	&:after
+		padding-top: 55%
 
 
 /*space*/
-.space 
+.space
 	text-align: center
 	padding: 50px 0
-	background: #6CE6C1 
+	background: #6CE6C1
 
 /*articles*/
-.articles 
-	background: #eee url(../../images/article-bg.jpg) 
+.articles
+	background: #eee url(../../images/article-bg.jpg)
 
-	.list-post-thum 
-		a 
+	.list-post-thum
+		a
 			display: block
 			width: 25%
 			float: left
@@ -302,14 +301,14 @@
 			transform: translateX(20px)
 			-webkit-transition: all .2s ease-in-out
 			-moz-ransition: all .2s ease-in-out
-			transition: all .2s ease-in-out 
+			transition: all .2s ease-in-out
 
-			&::after 
+			&::after
 				content: ""
 				display: block
-				padding-top: 100% 
+				padding-top: 100%
 
-			.article-meta 
+			.article-meta
 				opacity: 0
 				transform: scale(0)
 				+position(absolute, 0 0 0 0)
@@ -317,28 +316,28 @@
 				padding: 10px
 				-webkit-transition: all 0.3s ease-in-out
 				-moz-transition: all 0.3s ease-in-out
-				transition: all 0.3s ease-in-out 
+				transition: all 0.3s ease-in-out
 
-				h3 
+				h3
 					color: #141414
 					margin: 0
 					font:
 						size: 15px
-						weight: 500 
+						weight: 500
 
-				span 
+				span
 					font:
 						size: 13px
 						weight: 500
-					color: #756F6F 
+					color: #756F6F
 
-			&.is-visible 
+			&.is-visible
 				opacity: 1
 				-webkit-transform: translateX(0px)
 				-ms-transform: translateX(0px)
-				transform: translateX(0px) 
+				transform: translateX(0px)
 
-			&.is-animate 
+			&.is-animate
 				-webkit-animation-name: tada
 				-moz-animation-name: tada
 				animation-name: tada
@@ -349,34 +348,34 @@
 				-moz-animation-fill-mode: both
 				animation-fill-mode: both
 				z-index: 1
-				z-index: 99 
-			
-			&:hover .article-meta 
+				z-index: 99
+
+			&:hover .article-meta
 				opacity: 1
-				transform: scale(1) 
+				transform: scale(1)
 
 
 /*contact*/
-.contact 
+.contact
 	background: url(../../images/contact.jpg) no-repeat 50% 50%
 	background-size: cover
 	padding: 50px 0
 	position: relative
 	overflow: hidden
-	color: #fff 
+	color: #fff
 
-	&::before 
+	&::before
 		+position(absolute, 0 null null 0)
 		content: ""
 		display: block
 		+size(100% 100%)
 		background: rgba(218, 159, 12, 0.69)
 
-	.container 
+	.container
 		position: relative
-		z-index: 10 
+		z-index: 10
 
-	form 
+	form
 		background: rgba(255, 255, 255, 0.5)
 		overflow: hidden
 		max-width: 400px
@@ -386,14 +385,14 @@
 		color: #fff
 		border: 4px solid #fff
 
-		p 
+		p
 			margin: 0
 			border-bottom: 4px solid #fff
 			position: relative
 
 		input[type="text"],
 		input[type="email"],
-		textarea 
+		textarea
 			display: block
 			width: 100%
 			border: none
@@ -411,7 +410,7 @@
 			text-transform: uppercase
 			font-weight: 700
 
-		label 
+		label
 			font-size: 12px
 			color: #fff
 			position: absolute
@@ -419,72 +418,72 @@
 			left: 10px
 
 
-.contact 
-	.socials 
+.contact
+	.socials
 		list-style: none
 		padding: 0
-		margin: 40px 0 0 0 
+		margin: 40px 0 0 0
 
-		li 
+		li
 			display: inline-block
 			margin: 5px 15px
 			font-weight: 500
-			font-size: 17px 
+			font-size: 17px
 
-.socials 
+.socials
 	text-align: center
-	color: #fff 
-	p 
-		font-size: 25px 
+	color: #fff
+	p
+		font-size: 25px
 
-	.facebook, .google-plus, .twiter 
+	.facebook, .google-plus, .twiter
 		background-image: url(../../images/social.png)
-		padding-bottom: 4% 
+		padding-bottom: 4%
 		width: 33.333%
 		float: left
 
-	.facebook 
-		background-color: #45619D 
+	.facebook
+		background-color: #45619D
 
-		a 
-			color: #45619D 
+		a
+			color: #45619D
 
-	.google-plus 
-		background-color: #DB4437 
-		a 
-			color: #DB4437 
+	.google-plus
+		background-color: #DB4437
+		a
+			color: #DB4437
 
-	.twiter 
-		background-color: #4A9BDA 
+	.twiter
+		background-color: #4A9BDA
 
-		a 
-			color: #4A9BDA 
+		a
+			color: #4A9BDA
 
 /* footer */
 
 /*page*/
-.blogPage 
+.blogPage
 	position: relative
 	transition: all 5s ease-in-out
 	opacity: 1
 
-	&.ng-hide 
+	&.ng-hide
 		opacity: 0
 
-	a.back_home 
+	a.back_home
 		position: absolute
-		top: 15px 
+		top: 15px
 		left: 10px
 		cursor: pointer
 		display: inline-block
 		padding-left: 30px
 
-		svg 
+		svg
 			position: absolute
 			top: -1px
 			left: 0
 
-.w-blog 
+.w-blog
 	max-width: 500px
 	padding:
 		right: 15px
@@ -493,32 +492,25 @@
 		left: auto
 		right: auto
 
-	.top  
+	.top
 		overflow: hidden
 
-		h2 
+		h2
 			text-transform: uppercase
 			font-size: 50px
 			font-weight: 700
 			margin: 60px 0 0
-	
-	ul 
+
+	ul
 		list-style: none
 		padding: 0
 
 
-		li 
+		li
 			margin: 0 0 20px
 			border-bottom: 1px dashed #dedeed
 
 
-			h3 
+			h3
 				font-weight: 500
 				font-size: 16px
-
-
-
-
-
-
-
