@@ -6,9 +6,16 @@ app.config(function($routeProvider, 	$locationProvider) {
 		templateUrl: 'pages/home.html',
 		controller: 'homeCtrl'
 	})
+	.when('/work', {
+		templateUrl: 'pages/works.html',
+		controller: 'worksCtrl'
+	})
 	.when('/admin', {
 	  templateUrl: 'pages/admin.html',
 	  controller: 'adminCtrl'
-	});
+	}).
+	otherwise({
+    templateUrl: '/'
+  });
 	$locationProvider.html5Mode(true).hashPrefix('!');
 });

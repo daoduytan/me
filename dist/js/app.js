@@ -6,10 +6,17 @@ app.config(function($routeProvider, 	$locationProvider) {
 		templateUrl: 'pages/home.html',
 		controller: 'homeCtrl'
 	})
+	.when('/work', {
+		templateUrl: 'pages/works.html',
+		controller: 'worksCtrl'
+	})
 	.when('/admin', {
 	  templateUrl: 'pages/admin.html',
 	  controller: 'adminCtrl'
-	});
+	}).
+	otherwise({
+    templateUrl: '/'
+  });
 	$locationProvider.html5Mode(true).hashPrefix('!');
 });
 
@@ -307,12 +314,15 @@ app.controller('blogCtrl', ['$scope', function($scope){
     // })
 }]);
 
+app.controller('worksCtrl', ['$scope', function() {
+}]);
+
 app.controller('postCtrl', ['$scope', function($scope){
 
     function startArticles() {
         var wScroll = $(window).scrollTop();
 
-        if ($('#blog').offset().top - 200 < wScroll) {
+        if ($('#blog').length && $('#blog').offset().top - 200 < wScroll) {
             $('.article-thumb').each(function(i) {
                 setTimeout(function() {
                     $('.article-thumb').eq(i).addClass('is-visible');

@@ -274,12 +274,15 @@ app.controller('blogCtrl', ['$scope', function($scope){
     // })
 }]);
 
+app.controller('worksCtrl', ['$scope', function() {
+}]);
+
 app.controller('postCtrl', ['$scope', function($scope){
 
     function startArticles() {
         var wScroll = $(window).scrollTop();
 
-        if ($('#blog').offset().top - 200 < wScroll) {
+        if ($('#blog').length && $('#blog').offset().top - 200 < wScroll) {
             $('.article-thumb').each(function(i) {
                 setTimeout(function() {
                     $('.article-thumb').eq(i).addClass('is-visible');
