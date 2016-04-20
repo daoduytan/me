@@ -1,6 +1,6 @@
 var app = angular.module("myPage" , ['ngRoute']);
 
-app.config(function($routeProvider, 	$locationProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 	$routeProvider
 	.when('/', {
 		templateUrl: 'pages/home.html',
@@ -17,8 +17,8 @@ app.config(function($routeProvider, 	$locationProvider) {
 	otherwise({
     templateUrl: '/'
   });
-	$locationProvider.html5Mode(true).hashPrefix('!');
-});
+	$locationProvider.html5Mode(true);
+}]);
 
 app.directive('myform', function(){
 	// Runs during compile
